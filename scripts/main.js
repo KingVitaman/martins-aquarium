@@ -1,9 +1,9 @@
-import { fishList } from "./fishList.js";
+import { mostHolyFish, soldierFish, regularFish } from "./fishList.js";
 import { tipList } from "./tipList.js";
 import { locationList } from "./locationList.js";
 
-// Generate the fish list
-const fishHTML = fishList();
+// Generate the fish HTML in the correct order
+const fishHTML = mostHolyFish() + soldierFish() + regularFish();
 
 // Generate the care tips
 const tipHTML = tipList();
@@ -12,11 +12,7 @@ const tipHTML = tipList();
 const locationHTML = locationList();
 
 // Render each HTML string to the correct DOM element
-const newDisplay = document.querySelector("#fishList");
-newDisplay.innerHTML = fishHTML;
+document.querySelector("#fishList").innerHTML = fishHTML;
+document.querySelector("#tipList").innerHTML = tipHTML;
+document.querySelector("#locationList").innerHTML = locationHTML;
 
-const tipDisplay = document.querySelector("#tipList");
-tipDisplay.innerHTML = tipHTML;
-
-const locationDisplay = document.querySelector("#locationList");
-locationDisplay.innerHTML = locationHTML;

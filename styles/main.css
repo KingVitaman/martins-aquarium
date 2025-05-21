@@ -20,8 +20,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .main {
 	display: flex;
-	flex-direction: row;
-	justify-content: start;
+    flex-wrap: wrap;
 }
 
 #fishList, 
@@ -32,9 +31,17 @@ h1,h2,h3,h4,h5,h6 {
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
     padding: 1rem;
     margin: 2rem;
-    color: #333; /* Change from fuchsia to a more neutral color */
-    border: none; /* Remove the dotted border */
+    color: #333;
+    border: none; 
+
 }
+
+#locationList {
+    flex: 1 1 50%;
+  min-width: 300px; /* Optional: for responsiveness */
+  box-sizing: border-box;
+}
+
 .fish_image {
     width: 100%;
     height: 200px;
